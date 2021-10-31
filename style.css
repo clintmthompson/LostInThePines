@@ -1,0 +1,48 @@
+body{
+    background-color: black;
+    color: white;
+    margin: 0px;
+    height: 100vh;
+}
+
+#titlebar{
+    background-color: blue;
+    text-align: center;
+    border: white;
+    border-width: 2px;
+    border-style: solid;
+
+}
+
+
+#textWindow{
+    width: 80vw;
+    background-color: blue;
+    border: white;
+    border-width: 2px;
+    border-style: solid;
+    height: 100px;
+    
+}
+
+#menu{
+    display: inline;
+}
+
+button {
+    padding: 2px 5px;
+    margin: 5px;
+    font-size: 24px;
+    text-align: center;
+    cursor: pointer;
+    outline: none;
+    color: #fff;
+    background-color: blue;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 2px #999;
+  }
+
+button:hover {
+    background-color: darkblue;
+    }
