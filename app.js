@@ -5,23 +5,31 @@ var fireLife = 0
 var shelter = false
 var shelterCondition = 0
 var hunger = 100
-var food = []
 var foodItems = [
     {
         'name': '',
-        'hungerPoints': 0
+        'hungerPoints': 0,
+        'quantity': 0
     },
     {
         'name': 'berries',
-        'hungerPoints': 50
+        'hungerPoints': 50,
+        'quantity': 0
     },
     {
         'name': 'squirrel',
-        'hungerPoints': 100
+        'hungerPoints': 100,
+        'quantity': 0
+    },
+    {
+        'name': '',
+        'hungerPoints': 0,
+        'quantity': 0
     },
     {
         'name': 'onions',
-        'hungerPoints': 25
+        'hungerPoints': 25,
+        'quantity': 0
     },
 ]
 var huntResults = [
@@ -212,11 +220,17 @@ function getHungry(){
 function goHunt(){
     let selection = Math.floor(Math.random() * huntResults.length)
     if (huntResults[selection].item != ''){
-    food.push(huntResults[selection].item)}
-    $('#food').html(`${food}`)
+    foodItems[selection].quantity += 1
+    console.log(foodItems)
+}
+
+    $('#food').html(`${foodItems[1].name}: ${foodItems[1].quantity} <br>
+                     ${foodItems[2].name}: ${foodItems[2].quantity} <br>
+                     ${foodItems[4].name}: ${foodItems[4].quantity}`)
+    
     $('#textWindow').html(`${huntResults[selection].displayMessage}`)
+
     if(food != []){
         $('#foodHeading').html('Food:')
     }
 }
-
