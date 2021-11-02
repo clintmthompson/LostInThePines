@@ -217,6 +217,8 @@ function getHungry(){
 
 //CODE RESPONSIBLE FOR FOOD BELOW
 
+
+
 function goHunt(){
     let selection = Math.floor(Math.random() * huntResults.length)
     if (huntResults[selection].item != ''){
@@ -224,9 +226,29 @@ function goHunt(){
     console.log(foodItems)
 }
 
-    $('#food').html(`${foodItems[1].name}: ${foodItems[1].quantity} <br>
-                     ${foodItems[2].name}: ${foodItems[2].quantity} <br>
-                     ${foodItems[4].name}: ${foodItems[4].quantity}`)
+    $('#food').html(
+            `<table>
+                <tr>
+                    <th>Food</th>
+                    <th>Quantity</th>
+                    <th>Eat</th>
+                </tr>
+                <tr>
+                    <th>${foodItems[1].name}</th>
+                    <th>${foodItems[1].quantity}</th>
+                    <th><button>50 hp</button></th>
+                </tr>
+                <tr>
+                    <th>${foodItems[2].name}</th>
+                    <th>${foodItems[2].quantity}</th>
+                    <th><button>100 hp</button></th>
+                </tr>
+                <tr>
+                    <th>${foodItems[4].name}</th>
+                    <th>${foodItems[4].quantity}</th>
+                    <th><button>25 hp</button></th>
+                </tr>
+            </table>`)
     
     $('#textWindow').html(`${huntResults[selection].displayMessage}`)
 
