@@ -11,7 +11,7 @@ body{
     border: white;
     border-width: 2px;
     border-style: solid;
-
+    display: none;
 }
 
 
@@ -22,11 +22,18 @@ body{
     border-width: 2px;
     border-style: solid;
     height: 100px;
+    display: none;
+    text-align: center;
+    vertical-align: middle;
+    line-height: 100px;
+    
     
 }
 
 #menu{
     display: inline;
+    display: none;
+    
 }
 
 button {
@@ -46,3 +53,12 @@ button {
 button:hover {
     background-color: darkblue;
     }
+
+#intro{
+    position: absolute;
+    left: 50vh;
+    top: 50vh;
+    text-align: center;
+    vertical-align: middle;
+    display: none;
+}

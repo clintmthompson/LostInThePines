@@ -205,7 +205,7 @@ $( '#hunger' ).ready(function() {
 //Increases hunger level
 function getHungry(){
     if(hunger > 0){
-        hunger -= .5
+        hunger -= 1
         setTimeout(function() { getHungry(); }, 2000)
         $( '#hunger' ).html(`Time until starvation: ${hunger}`);
         return hunger}
@@ -256,3 +256,13 @@ function goHunt(){
         $('#foodHeading').html('Food:')
     }
 }
+
+//INTRO ANIMATIONS
+
+$(document).ready(function() {
+    setTimeout(function() { $("#intro").fadeIn(2000); }, 0)
+    setTimeout(function() { $("#intro").fadeOut(2000); }, 3000)
+    setTimeout(function() { $("#titlebar").fadeIn(2000); }, 5000)
+    setTimeout(function() { $("#textWindow").fadeIn(2000); }, 7000)
+    setTimeout(function() { $("#menu").fadeIn(2000); }, 9000)
+});
